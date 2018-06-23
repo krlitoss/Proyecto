@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
 
 public class JUEGO extends javax.swing.JFrame {
 
-    ArrayList<Integer> r = new ArrayList<Integer>();
+    ArrayList<Integer> arreglos = new ArrayList<Integer>();
     
 //    VARIABLES
     int tiempo = 500;
@@ -27,7 +27,7 @@ public class JUEGO extends javax.swing.JFrame {
         initComponents();
         
 //        COLOR BOTONES
-        jButton1.setBackground(java.awt.Color.white);
+        jButton1.setBackground(java.awt.Color.WHITE);
         jButton2.setBackground(java.awt.Color.WHITE);
         jButton3.setBackground(java.awt.Color.WHITE);
         jButton4.setBackground(java.awt.Color.WHITE);
@@ -47,81 +47,88 @@ public class JUEGO extends javax.swing.JFrame {
         jPanel4.setBackground(Color.lightGray);
         jPanel5.setBackground(Color.lightGray);
         jPanel6.setBackground(Color.lightGray);
-        BotonIniciar.addActionListener(new ActionListener() {
+        Inicio.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 setEnabled(false);
-                r.clear();
+                arreglos.clear();
 
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
                             int rand = (int) (Math.random() * rango) + min;
                             int sigt = rand;
-                            r.add(sigt);
+                            arreglos.add(sigt);
                             
                             switch (sigt) {
                                 case 0:
                                     jButton1.setBackground(Color.red);
-                                    System.out.println("Primer caso");
+                                    System.out.println("caso 0");
                                     Thread.sleep(tiempo);
                                     jButton1.setBackground(Color.WHITE);
                                     break;
                                 case 1:
                                     jButton2.setBackground(Color.red);
-                                    System.out.println("Segundo caso");
+                                    System.out.println("caso 1");
                                     Thread.sleep(tiempo);
                                     jButton2.setBackground(Color.WHITE);
                                     break;
                                 case 2:
                                     jButton3.setBackground(Color.red);
-                                    System.out.println("Tercer caso");
+                                    System.out.println("caso 2");
                                     Thread.sleep(tiempo);
                                     jButton3.setBackground(Color.WHITE);
                                     break;
                                 case 3:
                                     jButton4.setBackground(Color.red);
-                                    System.out.println("Cuarto caso");
+                                    System.out.println("caso 3");
                                     Thread.sleep(tiempo);
                                     jButton4.setBackground(Color.WHITE);
                                     break;
                                 case 4:
                                     jButton5.setBackground(Color.red);
-                                    System.out.println("Quinto caso");
+                                    System.out.println("caso 4");
                                     Thread.sleep(tiempo);
                                     jButton5.setBackground(Color.WHITE);
                                     break;
                                 case 5:
                                     jButton6.setBackground(Color.red);
+                                    System.out.println("caso 5");
                                     Thread.sleep(tiempo);
                                     jButton6.setBackground(Color.WHITE);
                                     break;
                                 case 6:
                                     jButton7.setBackground(Color.red);
+                                    System.out.println("caso 6");
                                     Thread.sleep(tiempo);
                                     jButton7.setBackground(Color.WHITE);
                                     break;
                                 case 7:
                                     jButton8.setBackground(Color.red);
+                                    System.out.println("caso 7");
                                     Thread.sleep(tiempo);
                                     jButton8.setBackground(Color.WHITE);
                                     break;
                                 case 8:
                                     jButton9.setBackground(Color.red);
+                                    System.out.println("caso 8");
                                     Thread.sleep(tiempo);
                                     jButton9.setBackground(Color.WHITE);
                                     break;
                                 case 9:
                                     jButton10.setBackground(Color.red);
+                                    System.out.println("caso 9");
                                     Thread.sleep(tiempo);
                                     jButton10.setBackground(Color.WHITE);
                                     break;
                                 case 10:
                                     jButton11.setBackground(Color.red);
+                                    System.out.println("caso 10");
                                     Thread.sleep(tiempo);
                                     jButton11.setBackground(Color.WHITE);
                                     break;
                                 case 11:
                                     jButton12.setBackground(Color.red);
+                                    System.out.println("caso 11");
                                     Thread.sleep(tiempo);
                                     jButton12.setBackground(Color.WHITE);
                                     break;
@@ -140,16 +147,121 @@ public class JUEGO extends javax.swing.JFrame {
                 hilo.start();
             }
         });
+        repetir.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                setEnabled(false);
+
+
+                Thread hilo = new Thread() {
+                    public void run() {
+                        try {
+                            for (int i = 0; i<arreglos.size(); i++){
+                             //pocision cero hasta el tamaño del arreglo - 1
+                             switch (arreglos.get(i)) {
+                                case 0:
+                                    jButton1.setBackground(Color.red);
+                                    System.out.println("caso 0");
+                                    Thread.sleep(tiempo);
+                                    jButton1.setBackground(Color.WHITE);
+                                    break;
+                                case 1:
+                                    jButton2.setBackground(Color.red);
+                                    System.out.println("caso 1");
+                                    Thread.sleep(tiempo);
+                                    jButton2.setBackground(Color.WHITE);
+                                    break;
+                                case 2:
+                                    jButton3.setBackground(Color.red);
+                                    System.out.println("caso 2");
+                                    Thread.sleep(tiempo);
+                                    jButton3.setBackground(Color.WHITE);
+                                    break;
+                                case 3:
+                                    jButton4.setBackground(Color.red);
+                                    System.out.println("caso 3");
+                                    Thread.sleep(tiempo);
+                                    jButton4.setBackground(Color.WHITE);
+                                    break;
+                                case 4:
+                                    jButton5.setBackground(Color.red);
+                                    System.out.println("caso 4");
+                                    Thread.sleep(tiempo);
+                                    jButton5.setBackground(Color.WHITE);
+                                    break;
+                                case 5:
+                                    jButton6.setBackground(Color.red);
+                                    System.out.println("caso 5");
+                                    Thread.sleep(tiempo);
+                                    jButton6.setBackground(Color.WHITE);
+                                    break;
+                                case 6:
+                                    jButton7.setBackground(Color.red);
+                                    System.out.println("caso 6");
+                                    Thread.sleep(tiempo);
+                                    jButton7.setBackground(Color.WHITE);
+                                    break;
+                                case 7:
+                                    jButton8.setBackground(Color.red);
+                                    System.out.println("caso 7");
+                                    Thread.sleep(tiempo);
+                                    jButton8.setBackground(Color.WHITE);
+                                    break;
+                                case 8:
+                                    jButton9.setBackground(Color.red);
+                                    System.out.println("caso 8");
+                                    Thread.sleep(tiempo);
+                                    jButton9.setBackground(Color.WHITE);
+                                    break;
+                                case 9:
+                                    jButton10.setBackground(Color.red);
+                                    System.out.println("caso 9");
+                                    Thread.sleep(tiempo);
+                                    jButton10.setBackground(Color.WHITE);
+                                    break;
+                                case 10:
+                                    jButton11.setBackground(Color.red);
+                                    System.out.println("caso 10");
+                                    Thread.sleep(tiempo);
+                                    jButton11.setBackground(Color.WHITE);
+                                    break;
+                                case 11:
+                                    jButton12.setBackground(Color.red);
+                                    System.out.println("caso 11");
+                                    Thread.sleep(tiempo);
+                                    jButton12.setBackground(Color.WHITE);
+                                    break;
+
+                            }
+
+                             }
+                            
+                            puntos = puntos/4;
+                            marcador.setText(Integer.toString(puntos));
+                            
+                        } catch (InterruptedException ex) {
+
+                        }
+                        SwingUtilities.invokeLater(new Runnable() {
+                            public void run() {
+                                setEnabled(true);
+                            }
+                        });
+                    }
+                };
+                hilo.start();
+            }
+        });
+        //////////////////////
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 setEnabled(false);
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 0) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 0) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -160,12 +272,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
                                     siguiente = 0;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
 
                                     switch (sigt) {
                                         case 0:
@@ -257,10 +369,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 1) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 1) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                 } else {
                                     if (puntos == 0) {
                                         puntos = 1;
@@ -269,12 +381,12 @@ public class JUEGO extends javax.swing.JFrame {
                                     }
 
                                     marcador.setText(Integer.toString(puntos));
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -366,10 +478,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 2) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 2) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                 } else {
                                     if (puntos == 0) {
                                         puntos = 1;
@@ -378,12 +490,12 @@ public class JUEGO extends javax.swing.JFrame {
                                     }
 
                                     marcador.setText(Integer.toString(puntos));
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -475,10 +587,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 3) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 3) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -489,12 +601,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -586,10 +698,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 4) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 4) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -600,12 +712,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -697,10 +809,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 5) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 5) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -711,12 +823,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -808,10 +920,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 6) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 6) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -822,12 +934,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -919,10 +1031,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 7) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 7) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -933,12 +1045,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -1030,10 +1142,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 8) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 8) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -1044,12 +1156,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -1141,10 +1253,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 9) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 9) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -1155,12 +1267,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -1252,10 +1364,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 10) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 10) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -1266,12 +1378,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -1363,10 +1475,10 @@ public class JUEGO extends javax.swing.JFrame {
                 Thread hilo = new Thread() {
                     public void run() {
                         try {
-                            if (r.get(siguiente) == 11) {
-                                if (siguiente < r.size() - 1) {
+                            if (arreglos.get(siguiente) == 11) {
+                                if (siguiente < arreglos.size() - 1) {
                                     siguiente++;
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
 
                                 } else {
                                     if (puntos == 0) {
@@ -1377,12 +1489,12 @@ public class JUEGO extends javax.swing.JFrame {
 
                                     marcador.setText(Integer.toString(puntos));
 
-                                    System.out.println("Sig" + siguiente + " valor" + r.get(siguiente));
+                                    System.out.println("Sig" + siguiente + " valor" + arreglos.get(siguiente));
                                     //tiempo=tiempo-30;
                                     int rand = (int) (Math.random() * rango) + min;
                                     int sigt = rand;
                                     //Se tiene que agregar sigt al arreglo
-                                    r.add(sigt);
+                                    arreglos.add(sigt);
                                     siguiente = 0;
                                     switch (sigt) {
                                         case 0:
@@ -1495,17 +1607,12 @@ public class JUEGO extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        BotonIniciar = new javax.swing.JButton();
-        BotonRepetir = new javax.swing.JButton();
+        Inicio = new javax.swing.JButton();
+        repetir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         marcador.setFont(new java.awt.Font("Viner Hand ITC", 0, 36)); // NOI18N
-        marcador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcadorActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1524,12 +1631,6 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -1538,9 +1639,8 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1563,9 +1663,8 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -1588,9 +1687,8 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -1613,9 +1711,8 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                        .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -1630,14 +1727,9 @@ public class JUEGO extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        BotonIniciar.setText("A JUGAR!!");
+        Inicio.setText("A JUGAR!!");
 
-        BotonRepetir.setText("OTRA VEZ!!");
-        BotonRepetir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRepetirActionPerformed(evt);
-            }
-        });
+        repetir.setText("OTRA VEZ!!");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1645,9 +1737,9 @@ public class JUEGO extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BotonRepetir, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(repetir, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotonIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -1655,8 +1747,8 @@ public class JUEGO extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonIniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-                    .addComponent(BotonRepetir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(repetir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1697,18 +1789,6 @@ public class JUEGO extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void marcadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_marcadorActionPerformed
-
-    private void BotonRepetirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRepetirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonRepetirActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1747,8 +1827,7 @@ public class JUEGO extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonIniciar;
-    private javax.swing.JButton BotonRepetir;
+    private javax.swing.JButton Inicio;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1768,5 +1847,6 @@ public class JUEGO extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTextField marcador;
+    private javax.swing.JButton repetir;
     // End of variables declaration//GEN-END:variables
 }

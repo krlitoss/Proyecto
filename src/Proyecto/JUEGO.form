@@ -90,9 +90,6 @@
               <Font name="Viner Hand ITC" size="36" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="marcadorActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -128,9 +125,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton1">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
         </Component>
@@ -262,9 +256,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="BotonRepetir" min="-2" pref="154" max="-2" attributes="0"/>
+                  <Component id="repetir" min="-2" pref="154" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="BotonIniciar" min="-2" pref="153" max="-2" attributes="0"/>
+                  <Component id="Inicio" min="-2" pref="153" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -274,8 +268,8 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="BotonIniciar" pref="60" max="32767" attributes="0"/>
-                      <Component id="BotonRepetir" max="32767" attributes="0"/>
+                      <Component id="Inicio" pref="60" max="32767" attributes="0"/>
+                      <Component id="repetir" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -283,18 +277,15 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="BotonIniciar">
+        <Component class="javax.swing.JButton" name="Inicio">
           <Properties>
             <Property name="text" type="java.lang.String" value="A JUGAR!!"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BotonRepetir">
+        <Component class="javax.swing.JButton" name="repetir">
           <Properties>
             <Property name="text" type="java.lang.String" value="OTRA VEZ!!"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonRepetirActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
