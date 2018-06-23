@@ -51,6 +51,10 @@ public class JUEGO extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent ev) {
                 setEnabled(false);
                 arreglos.clear();
+                siguiente = 0;
+                puntos = 0;
+                marcador.setText(Integer.toString(puntos));
+                
 
                 Thread hilo = new Thread() {
                     public void run() {
@@ -150,7 +154,7 @@ public class JUEGO extends javax.swing.JFrame {
         repetir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 setEnabled(false);
-
+                
 
                 Thread hilo = new Thread() {
                     public void run() {
@@ -1612,6 +1616,7 @@ public class JUEGO extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        marcador.setEditable(false);
         marcador.setFont(new java.awt.Font("Viner Hand ITC", 0, 36)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
